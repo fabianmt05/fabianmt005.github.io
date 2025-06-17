@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff; 
+}
+
+/* Contenedor principal */
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #1f1f1f, #111);
+  padding: 1.2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #222;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container img {
+  max-width: 180px;
+  filter: drop-shadow(0 0 5px #ffffff66);
+  transition: filter 0.3s ease;
+}
+
+.logo-container img:hover {
+  filter: drop-shadow(0 0 12px #ffffffcc);
+}
+
+.menu-container ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu-container a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-container a:hover {
+  color: #ffffff;
+  background-color: rgba(0, 191, 255, 0.15);
+}
+
+/* BODY PRINCIPAL */
+.bodyprincipal {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5rem 1rem;
+  gap: 2.5rem;
+  background-color: #121212;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
+}
+
+main {
+  flex: 2;
+  background-color: #1c1c1c;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+main:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+main h1, main h2 {
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+main ul {
+  padding-left: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+main li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* ASIDE */
+aside {
+  flex: 1;
+  background-color: #121212;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+aside:hover {
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.25);
+}
+
+aside img {
+  width: 100%;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.35);
+  transition: box-shadow 0.3s ease;
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: #bbb;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  border-top: 2px solid #222;
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  letter-spacing: 0.03em;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+  transition: color 0.3s ease;
+}
+
+.footer-block:hover {
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer p {
+  width: 100%;
+  text-align: center;
+  color: #888;
+  margin-top: 3rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* Responsive ajustes en footer */
+@media (max-width: 768px) {
+  footer {
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .footer-block {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bodyprincipal {
+    flex-direction: column;
+    padding: 1.2rem 1rem;
+  }
+
+  header, .menu-container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-container ul {
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  main, aside {
+    flex: unset;
+    width: 100%;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-block {
+    max-width: 100%;
+  }
+}
